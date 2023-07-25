@@ -1,0 +1,307 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    width:100%;
+    height:100%;
+    padding:0px;
+    margin:0px;
+}
+
+.big{
+    display:flex;
+    position:relative;
+    
+}
+.leftBar{
+    width:10vw;
+    height:100vh;
+    background: linear-gradient(0deg, rgba(115,115,109,1) 0%, rgba(0,0,0,1) 100%);
+    position: sticky;
+    top:0px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.icon{
+    width:8vw;
+}
+.rightContent{
+    height: fit-content;
+    /* background-color: hsl(194, 86%, 77%); */
+    width:90vw;
+}
+
+.backhome{
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    z-index: 99;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: darkgray;
+}
+
+.backhome img{
+    width:50px;
+    height:50px;
+}
+
+a:link {
+    color:white;
+}
+a:visited {
+    color:white;
+}
+
+a:active{
+    color:white;
+}
+
+.home{
+    height:100vh;
+    background-image: url("./home.jpg");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.hometext{
+    position:absolute;
+    left:47%;
+    top:38%;
+    font-size: 2.5vw;
+    font-style: italic;
+}
+
+.skill{
+    height:800px;
+    position:relative;
+    background: radial-gradient(circle, rgb(178, 231, 235) 20%, rgba(66,183,221,1) 100%);
+}
+
+.skillimg{
+    width:10vw;
+    height:auto;
+    position:absolute;
+    top:10%;
+    left:5%;
+}
+
+.skillcontent{
+    width:70%;
+    position: absolute;
+
+    height:60%;
+    bottom:15%;
+    right:5%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.skillcontent img:hover{
+    transform: scale(1.04);
+    cursor:crosshair;
+    box-shadow: 5px 5px 10px #a3a3a3; 
+    transition: all 0.3s linear;
+}
+
+.skillList{
+    font-size: 35px;
+    line-height: 2;
+    color:linear-gradient(90deg, rgba(245,37,233,1) 0%, rgba(7,18,22,1) 100%);
+}
+
+.portfolio{
+    height:fit-content;
+    background-color: aliceblue;
+    background-image: url("./profobg.jpg");
+    padding:20px;
+    background-size:100%;
+}
+
+.pfh{
+    border-bottom:6px solid rgba(70, 185, 214, 0.6);
+    width:fit-content;
+    color:rgb(68, 231, 191)
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+    padding:50px;
+    
+}
+
+.box{
+    border:2px solid black;
+    width:40%;
+    margin:20px;
+    position: relative;
+    
+}
+
+.box img{
+    width:100%;
+    height:100%;
+}
+
+
+/* .slide{
+    display:inline-block;
+    overflow: hidden;
+    transition: transform 0.5s;
+} */
+
+.box:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #a3a3a3; 
+    transition: all 0.3s linear;
+}
+
+/* .slide img:hover{
+    transform: translateX(-100%);
+} */
+
+.description{
+    position:absolute;
+    width: 70%;
+    background-color: rgb(207, 233, 238);
+    color:black;
+    height:fit-content;
+    line-height: 1px;
+    text-align: center;
+    bottom:0;
+    left:15%;
+    transform:rotate(3deg);
+    font-size: 1vw;
+}
+
+.contact{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    background-color:black;
+    color:white;
+}
+
+.contact h3{
+    margin:0px;
+    border-bottom:6px white solid;
+    width:fit-content;
+    height:fit-content
+}
+
+.contact p {
+
+    padding-left:100px;
+}
+
+.leetwars img{
+    width:100%
+}
+
+@media screen and (max-width:1000px){
+    .hometext{
+        font-size: 20px;
+    }
+
+    .skillcontent{
+        top:10%;
+        width:90%;
+    }
+
+    .skillimg{
+        top:5%;
+    }
+
+    .box{
+        width:100%;
+    }
+
+    
+}
+
+@media screen and (max-width:600px) {
+    .big{
+        display:block;
+    }
+    .leftBar{
+        position:fixed;
+        top:0px;
+        width:100%;
+        height:10vh;
+        flex-direction: row;
+        z-index: 10;
+        opacity: 0.3;
+    }
+
+    .leftBar:hover{
+        opacity:1;
+    }
+    .rightContent{
+        width:100%;
+        
+        
+    }
+
+    .hometext{
+        font-size: 15px;
+    }
+
+    .home{
+        height:500px;
+        width:100%;
+    }
+
+    .backhome{
+        right:10px;
+        bottom:10px;
+    }
+
+    .skillimg{
+        width:10vw;
+        height:auto;
+        position:absolute;
+        top:3%;
+        left:10%;
+    }
+
+    .skill{
+        height:1000px;
+        
+    }
+
+    .skillcontent{
+        width:100%;
+        height:fit-content;
+        top:8%;
+        padding:0;
+        right:0;
+    }
+
+    ul{
+        columns:2;
+    }
+
+    li{
+        display:inline-block;
+        width:100%;
+    }
+
+    .description{
+        font-size: 15px;
+    }
+
+    .box{
+        width:100%;
+    }
+}
+
