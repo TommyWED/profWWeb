@@ -63,7 +63,7 @@ a:active{
 
 .home{
     height:100vh;
-    background-image: url("./home.jpg");
+    background-image: url("./image/home.jpg");
     background-size:100% 100%;
     position:relative;
 }
@@ -119,7 +119,7 @@ a:active{
 .portfolio{
     height:fit-content;
     background-color: aliceblue;
-    background-image: url("./profobg.jpg");
+    background-image: url("./image/profobg.jpg");
     padding:20px;
     background-size:100%;
 }
@@ -206,6 +206,34 @@ a:active{
 
 .leetwars img{
     width:100%
+}
+
+
+@keyframes leftmove{
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.leftimg{
+    transform: translateX(-100vw);
+    transition: transform 0.5s ease;
+}
+
+.leftimg.show{
+    transform: translateX(0);
+}
+
+.rightimg{
+    transform: translateX(100vw);
+    transition: transform 0.5s ease;
+}
+
+.rightimg.show{
+    transform: translateX(0);
 }
 
 @media screen and (max-width:1000px){
