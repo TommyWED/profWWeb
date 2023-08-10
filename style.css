@@ -10,15 +10,21 @@ body{
     margin:0px;
 }
 
-#message span{
-    animation: blinker 1s lineart infinite;
+/* #message span{
+    animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker{
+    0%{
+        opacity: 1;
+    }
     50%{
         opacity:0;
     }
-}
+    100%{
+        opacity: 1;
+    }
+} */
 
 .big{
 
@@ -26,15 +32,17 @@ body{
 }
 
 .toggle-bar{
+    position:fixed;
     width:100%;
     height:70px;
-    background: linear-gradient(0deg, rgba(115,115,109,1) 0%, rgba(0,0,0,1) 100%);
-    top:0px;
+    background: linear-gradient(0deg, rgba(3,43,60,1) 0%, rgba(1,15,21,1) 100%);
+    top:0;
     color:white;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 55;
 }
 .icon{
     height: 140px;
@@ -74,47 +82,84 @@ a:active{
 
 .home{
     height:100vh;
-    background-image: url("./image/home.jpg");
+    background-image: url("./image/homebgimg.jpg");
+    /* background-color: #010F15; */
     background-size:100% 100%;
     position:relative;
+    color:#31ffd2;
 }
 
+.homeblank{
+    position: absolute;
+    height:100vh;
+    width:100%;
+    background-color: #010F15;
+    animation: lefttoright 1s ;
+    animation-fill-mode: forwards;
+    z-index:10;
+}
+
+@keyframes lefttoright{
+    0%{
+        width:100%
+    }
+    100%{
+        width:0%
+    }
+}
 .hometext{
     position:absolute;
-    left:47%;
-    top:38%;
+    left:8%;
+    top:42%;
     font-size: 2.5vw;
     font-style: italic;
+    text-shadow: 10px 10px 3px #21add8, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    line-height:30px;
 }
 
+.hometext h1{
+    
+}
+
+
+/* ---------About---------------- */
+.about{
+    height:100vh;
+    background-color: #032B3C;
+}
+
+/* ------------SKILL----------------- */
 .skill{
-    height:800px;
+    height:fit-content;
     position:relative;
-    background: radial-gradient(circle, rgb(178, 231, 235) 20%, rgba(66,183,221,1) 100%);
+    /* background: radial-gradient(circle, rgb(178, 231, 235) 20%, rgba(66,183,221,1) 100%); */
+    background-color: #010F15;
+    color:white;
 }
 
-.skillimg{
-    width:10vw;
-    height:auto;
-    position:absolute;
-    top:10%;
-    left:5%;
+h2{
+    padding-top: 30px;
+    margin:0;
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    font-weight: bolder;
+    text-shadow: 5px 5px 6px white
+
 }
+
 
 .skillcontent{
-    width:70%;
-    position: absolute;
-
-    height:60%;
-    bottom:15%;
-    right:5%;
+    padding-top:50px;
     display:flex;
     justify-content: space-around;
     flex-wrap:wrap;
     align-items: center;
+    padding-bottom:50px;
 }
 
-.skillcontent img:hover{
+
+.leetwars img:hover{
     transform: scale(1.04);
     cursor:crosshair;
     box-shadow: 5px 5px 10px #a3a3a3; 
@@ -122,15 +167,93 @@ a:active{
 }
 
 .skillList{
+    /* border:#31ffd2 double 10px; */
+    width:40vw;
     font-size: 35px;
     line-height: 2;
     color:linear-gradient(90deg, rgba(245,37,233,1) 0%, rgba(7,18,22,1) 100%);
+    padding: 40px;
 }
 
+.tech{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.tech span:nth-of-type(2){
+    right:10%
+}
+
+.skillbar{
+    position: relative;
+    border:#31ffd2 1px solid;
+    width:100%;
+    height:25px;
+    /* animation: skillkey 1s;
+    animation-fill-mode: forwards; */
+}
+
+.animationbar60{
+    position:absoulte;
+    top:0;
+    left:0;
+    height:25px;
+    background-color: #21add8;
+    animation: skillkey60 4s infinite forwards;
+}
+
+.animationbar70{
+    position:absoulte;
+    top:0;
+    left:0;
+    height:25px;
+    background-color: #21add8;
+    animation: skillkey70 4s infinite forwards;
+}
+
+.animationbar80{
+    position:absoulte;
+    top:0;
+    left:0;
+    height:25px;
+    background-color: #21add8;
+    animation: skillkey80 4s infinite forwards;
+}
+
+@keyframes skillkey60{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%
+    }
+}
+
+@keyframes skillkey80{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%
+    }
+}
+
+@keyframes skillkey70{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:70%
+    }
+}
+
+/* ----------Portfolio-------- */
 .portfolio{
     height:fit-content;
-    background-color: aliceblue;
-    background-image: url("./image/profobg.jpg");
+    background-color: #032B3C;
+    /* background-image: url("./image/profobg.jpg"); */
     padding:20px;
     background-size:100%;
 }
@@ -199,8 +322,8 @@ a:active{
     align-items: center;
     justify-content: center;
     height:50px;
-    background-color:black;
-    color:white;
+    background-color:#010F15;
+    color:#BCC5C9;
 }
 
 .contact h3{
@@ -214,6 +337,12 @@ a:active{
 
     padding-left:100px;
 }
+
+.contact img{
+    height:40px;
+    padding-left:50px;
+}
+
 
 .leetwars img{
     width:100%
@@ -335,8 +464,8 @@ a:active{
     }
 
     .skill{
-        height:1000px;
-        
+        height:fit-content;
+        padding-bottom:15px;
     }
 
     .skillcontent{

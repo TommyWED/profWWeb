@@ -4,7 +4,7 @@ let speed = 100;
 var count = 0;
 
 typewriter=() =>{
-  document.querySelector("#message").innerHTML = messageArray[0].substring(0,textPosition) + "<span>\u25ae<\span>"
+  document.querySelector("#message").innerHTML = messageArray[0].substring(0,textPosition) +"|"
   
   if(textPosition == 0 ||  textPosition == messageArray[0].length){
     count++
